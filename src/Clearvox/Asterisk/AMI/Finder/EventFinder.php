@@ -29,7 +29,6 @@ class EventFinder
         "DongleShowDevicesComplete"  => "Clearvox\\Asterisk\\AMI\\Message\\Event\\DongleShowDevicesCompleteEvent",
         "DongleStatus"               => "Clearvox\\Asterisk\\AMI\\Message\\Event\\DongleStatusEvent",
         "DongleUSSDStatus"           => "Clearvox\\Asterisk\\AMI\\Message\\Event\\DongleUSSDStatusEvent",
-        "EventMessage.php"           => "Clearvox\\Asterisk\\AMI\\Message\\Event\\EventMessage",
         "ExtensionStatus"            => "Clearvox\\Asterisk\\AMI\\Message\\Event\\ExtensionStatusEvent",
         "FullyBooted"                => "Clearvox\\Asterisk\\AMI\\Message\\Event\\FullyBootedEvent",
         "Hangup"                     => "Clearvox\\Asterisk\\AMI\\Message\\Event\\HangupEvent",
