@@ -1,5 +1,5 @@
 {
-    "name": "clearvox/asterisk-ami",
+    "name": "clearvox/react-ami",
     "description": "A ReactPHP implementation of communicating with the Asterisk Manager Interface",
     "keywords": ["AMI", "Asterisk Manager Interface", "ReactPHP"],
     "license": "MIT",
