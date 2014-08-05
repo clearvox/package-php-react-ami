@@ -32,20 +32,33 @@ class Manager extends EventEmitter
      */
     protected $actions = array();
 
-    public function __construct(Stream $stream, Process $process)
+    public function __construct(Process $process)
     {
-        $this->stream  = $stream;
         $this->process = $process;
+    }
 
-        $that = $this;
+    /**
+     * Set the stream for the Manager instance.
+     *
+     * @param Stream $stream
+     */
+    public function setStream(Stream $stream)
+    {
+        $this->stream = $stream;
 
-        $this->stream->on('data', function ($part) use ($process, $that) {
-            $messages = $process->read($part);
+        $that    = $this;
+        $process = $this->process;
 
-            foreach ($messages as $message) {
-                $process->run($that, $message);
+        $this->stream->on(
+            'data',
+            function ($part) use ($process, $that) {
+                $messages = $process->read($part);
+
+                foreach ($messages as $message) {
+                    $process->run($that, $message);
+                }
             }
-        });
+        );
     }
 
     /**
