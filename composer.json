@@ -1,0 +1,19 @@
+{
+    "name": "clearvox/asterisk-ami",
+    "description": "A ReactPHP implementation of communicating with the Asterisk Manager Interface",
+    "keywords": ["AMI", "Asterisk Manager Interface", "ReactPHP"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leon Rowland",
+            "email": "leon@rowland.nl"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "react/socket-client": "0.4"
+    },
+    "autoload": {
+        "psr-0": { "Clearvox\\Asterisk\\AMI": "src/" }
+    }
+}
