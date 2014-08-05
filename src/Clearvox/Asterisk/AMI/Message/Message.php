@@ -1,6 +1,9 @@
 <?php
 namespace Clearvox\Asterisk\AMI\Message;
 
+use Illuminate\Support\Contracts\ArrayableInterface;
+use Illuminate\Support\Contracts\JsonableInterface;
+
 /**
  * All Messages, Incoming and Outgoing, are classes of this larger abstract
  * class. From here you can determine each part of the message like its
@@ -13,7 +16,7 @@ namespace Clearvox\Asterisk\AMI\Message;
  * @subpackage Message
  * @author Leon Rowland <leon@rowland.nl>
  */
-abstract class Message
+abstract class Message implements JsonableInterface, ArrayableInterface
 {
     /**
      * The End of the Line specification
@@ -102,4 +105,30 @@ abstract class Message
         $this->variables[$variable] = $value;
         return $this;
     }
+
+    /**
+     * Get the instance as an array.
+     *
+     * @return array
+     */
+    public function toArray()
+    {
+        return array(
+            'keys'      => $this->keys,
+            'variables' => $this->variables
+        );
+    }
+
+    /**
+     * Convert the object to its JSON representation.
+     *
+     * @param  int $options
+     * @return string
+     */
+    public function toJson($options = 0)
+    {
+        return json_encode($this->toArray(), $options);
+    }
+
+
 }

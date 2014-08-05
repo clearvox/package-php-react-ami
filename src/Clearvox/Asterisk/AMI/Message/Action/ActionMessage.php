@@ -2,10 +2,8 @@
 namespace Clearvox\Asterisk\AMI\Message\Action;
 
 use Clearvox\Asterisk\AMI\Message\OutgoingMessage;
-use Illuminate\Support\Contracts\ArrayableInterface;
-use Illuminate\Support\Contracts\JsonableInterface;
 
-abstract class ActionMessage extends OutgoingMessage implements JsonableInterface, ArrayableInterface
+abstract class ActionMessage extends OutgoingMessage
 {
     public function __construct($action)
     {
@@ -48,17 +46,4 @@ abstract class ActionMessage extends OutgoingMessage implements JsonableInterfac
             'data'   => $actionData
         );
     }
-
-    /**
-     * Convert the object to its JSON representation.
-     *
-     * @param  int $options
-     * @return string
-     */
-    public function toJson($options = 0)
-    {
-        return json_encode($this->toArray(), $options);
-    }
-
-
 }
