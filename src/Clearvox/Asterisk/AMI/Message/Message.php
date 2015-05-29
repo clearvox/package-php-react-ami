@@ -1,8 +1,8 @@
 <?php
 namespace Clearvox\Asterisk\AMI\Message;
 
-use Illuminate\Support\Contracts\ArrayableInterface;
-use Illuminate\Support\Contracts\JsonableInterface;
+use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Contracts\Support\Jsonable;
 
 /**
  * All Messages, Incoming and Outgoing, are classes of this larger abstract
@@ -16,7 +16,7 @@ use Illuminate\Support\Contracts\JsonableInterface;
  * @subpackage Message
  * @author Leon Rowland <leon@rowland.nl>
  */
-abstract class Message implements JsonableInterface, ArrayableInterface
+abstract class Message implements Jsonable, Arrayable
 {
     /**
      * The End of the Line specification

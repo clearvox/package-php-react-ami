@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "23742bdb04c95f5b7afeca8d4f9b8097",
+    "hash": "4d70f5b1cb8b798e8d542f7a221e4bff",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -52,40 +53,32 @@
             "time": "2012-11-02 14:49:47"
         },
         {
-            "name": "illuminate/support",
-            "version": "v4.2.7",
-            "target-dir": "Illuminate/Support",
+            "name": "illuminate/contracts",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/illuminate/support.git",
-                "reference": "b3d84fa93aa3f2081a935158f860de8308d62d5a"
+                "url": "https://github.com/illuminate/contracts.git",
+                "reference": "78f1dba092d5fcb6d3a19537662abe31c4d128fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/b3d84fa93aa3f2081a935158f860de8308d62d5a",
-                "reference": "b3d84fa93aa3f2081a935158f860de8308d62d5a",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/78f1dba092d5fcb6d3a19537662abe31c4d128fd",
+                "reference": "78f1dba092d5fcb6d3a19537662abe31c4d128fd",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
             },
-            "require-dev": {
-                "jeremeamia/superclosure": "~1.0",
-                "patchwork/utf8": "1.1.*"
-            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.2-dev"
+                    "dev-master": "5.0-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Illuminate\\Support": ""
-                },
-                "files": [
-                    "Illuminate/Support/helpers.php"
-                ]
+                "psr-4": {
+                    "Illuminate\\Contracts\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -97,7 +90,8 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2014-07-21 21:14:59"
+            "description": "The Illuminate Contracts package.",
+            "time": "2015-01-30 16:27:08"
         },
         {
             "name": "react/cache",
@@ -225,16 +219,16 @@
         },
         {
             "name": "react/promise",
-            "version": "v2.0.0",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "58129a9cb9da88f2055309a805e2696b06928bb0"
+                "reference": "365fcee430dfa4ace1fbc75737ca60ceea7eeeef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/58129a9cb9da88f2055309a805e2696b06928bb0",
-                "reference": "58129a9cb9da88f2055309a805e2696b06928bb0",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/365fcee430dfa4ace1fbc75737ca60ceea7eeeef",
+                "reference": "365fcee430dfa4ace1fbc75737ca60ceea7eeeef",
                 "shasum": ""
             },
             "require": {
@@ -247,11 +241,11 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "React\\Promise": "src/"
+                "psr-4": {
+                    "React\\Promise\\": "src/"
                 },
                 "files": [
-                    "src/React/Promise/functions.php"
+                    "src/functions_include.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -261,13 +255,11 @@
             "authors": [
                 {
                     "name": "Jan Sorgalla",
-                    "email": "jsorgalla@googlemail.com",
-                    "homepage": "http://sorgalla.com",
-                    "role": "maintainer"
+                    "email": "jsorgalla@googlemail.com"
                 }
             ],
             "description": "A lightweight implementation of CommonJS Promises/A for PHP",
-            "time": "2013-12-10 15:40:36"
+            "time": "2014-12-30 13:32:42"
         },
         {
             "name": "react/socket",
@@ -353,21 +345,25 @@
         },
         {
             "name": "react/stream",
-            "version": "v0.4.1",
+            "version": "v0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/stream.git",
-                "reference": "9db28e85a6fe7b57fad5e8c036f3434bcb8c8f60"
+                "reference": "acc7a5fec02e0aea674560e1d13c40ed0c8c5465"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/9db28e85a6fe7b57fad5e8c036f3434bcb8c8f60",
-                "reference": "9db28e85a6fe7b57fad5e8c036f3434bcb8c8f60",
+                "url": "https://api.github.com/repos/reactphp/stream/zipball/acc7a5fec02e0aea674560e1d13c40ed0c8c5465",
+                "reference": "acc7a5fec02e0aea674560e1d13c40ed0c8c5465",
                 "shasum": ""
             },
             "require": {
                 "evenement/evenement": "~2.0",
                 "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "react/event-loop": "0.4.*",
+                "react/promise": "~2.0"
             },
             "suggest": {
                 "react/event-loop": "0.4.*",
@@ -376,12 +372,12 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.4-dev"
+                    "dev-master": "0.5-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "React\\Stream\\": ""
+                    "React\\Stream\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -393,23 +389,17 @@
                 "pipe",
                 "stream"
             ],
-            "time": "2014-03-30 17:19:02"
+            "time": "2014-09-10 03:32:31"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.3"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }
