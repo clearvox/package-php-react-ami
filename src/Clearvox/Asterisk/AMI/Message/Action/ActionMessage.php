@@ -43,7 +43,8 @@ abstract class ActionMessage extends OutgoingMessage
 
         return array(
             'action' => $action,
-            'data'   => $actionData
+            'data'   => $actionData,
+            'variables' => $this->variables
         );
     }
 }
