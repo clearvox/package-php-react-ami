@@ -88,4 +88,11 @@ class Manager extends EventEmitter
         return $this->actions;
     }
 
+    /**
+     * Close the manager connection
+     */
+    public function close()
+    {
+        $this->stream->close();
+    }
 }
