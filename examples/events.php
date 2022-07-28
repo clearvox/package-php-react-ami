@@ -12,7 +12,7 @@ use React\Dns\Protocol\Parser;
 use React\Dns\Query\Executor;
 use React\Dns\Resolver\Resolver;
 use React\EventLoop\Factory;
-use React\SocketClient\Connector;
+use React\Socket\Connector;
 use React\Stream\Stream;
 
 require __DIR__ . '/../vendor/autoload.php';

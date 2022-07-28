@@ -5,12 +5,12 @@ use Clearvox\Asterisk\AMI\Message\IncomingMessage;
 
 class ResponseMessage extends IncomingMessage
 {
-    public function isSuccessful()
+    public function isSuccessful(): bool
     {
-        return (bool) (false === strstr($this->getKey('Response'), 'Error'));
+        return !str_contains($this->getKey('Response'), 'Error');
     }
 
-    public function getMessage()
+    public function getMessage(): bool|string
     {
         return $this->getKey('Message');
     }

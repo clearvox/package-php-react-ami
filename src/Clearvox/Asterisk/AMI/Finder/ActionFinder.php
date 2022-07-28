@@ -1,9 +1,11 @@
 <?php
 namespace Clearvox\Asterisk\AMI\Finder;
 
+use ReflectionException;
+
 class ActionFinder
 {
-    protected $actions = array(
+    protected array $actions = array(
         "AGI"                => "Clearvox\\Asterisk\\AMI\\Message\\Action\\AGIAction",
         "AbsoluteTimeout"    => "Clearvox\\Asterisk\\AMI\\Message\\Action\\AbsoluteTimeoutAction",
         "AgentLogoff"        => "Clearvox\\Asterisk\\AMI\\Message\\Action\\AgentLogoffAction",
@@ -102,12 +104,15 @@ class ActionFinder
         "WaitEvent"          => "Clearvox\\Asterisk\\AMI\\Message\\Action\\WaitEventAction",
     );
 
-    public function register($name, $class)
+    public function register($name, $class): static
     {
         $this->actions[$name] = $class;
         return $this;
     }
 
+    /**
+     * @throws ReflectionException
+     */
     public function find($name, $arguments = array())
     {
         if (array_key_exists($name, $this->actions)) {

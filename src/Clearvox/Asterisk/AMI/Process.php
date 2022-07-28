@@ -19,12 +19,12 @@ class Process
     /**
      * @var Finder\EventFinder
      */
-    protected $eventFinder;
+    protected EventFinder $eventFinder;
 
     /**
      * @var string
      */
-    protected $buffer = '';
+    protected string $buffer = '';
 
     public function __construct(
         EventFinder $eventFinder
@@ -41,7 +41,7 @@ class Process
      * @param string $part
      * @return array
      */
-    public function read($part)
+    public function read(string $part): array
     {
         $messages = array();
         $this->buffer .= $part;
@@ -70,7 +70,7 @@ class Process
      * @param Manager $manager
      * @param $message
      */
-    public function run(Manager $manager, $message)
+    public function run(Manager $manager, $message): void
     {
         $eventPosition    = strpos($message, 'Event:');
         $responsePosition = strpos($message, 'Response:');
@@ -108,7 +108,7 @@ class Process
      * @param string $message
      * @return string
      */
-    protected function determineEventName($eventPosition, $message)
+    protected function determineEventName(int $eventPosition, string $message): string
     {
         $eventNameStart = $eventPosition + 7;
 

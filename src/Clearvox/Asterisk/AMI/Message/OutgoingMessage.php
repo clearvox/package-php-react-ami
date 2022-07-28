@@ -21,7 +21,7 @@ class OutgoingMessage extends Message
      *
      * @return string
      */
-    public function toString()
+    public function toString(): string
     {
         $prepared = array();
 

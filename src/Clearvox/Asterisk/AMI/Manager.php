@@ -4,7 +4,8 @@ namespace Clearvox\Asterisk\AMI;
 use Clearvox\Asterisk\AMI\Message\Action\ActionMessage;
 use Evenement\EventEmitter;
 use React\Promise\Deferred;
-use React\Stream\Stream;
+use React\Promise\Promise;
+use React\Stream\ReadableStreamInterface;
 
 /**
  * Holds the connected AMI Stream and has the Process class to
@@ -18,19 +19,19 @@ use React\Stream\Stream;
 class Manager extends EventEmitter
 {
     /**
-     * @var \React\Stream\Stream
+     * @var ReadableStreamInterface
      */
-    protected $stream;
+    protected ReadableStreamInterface $stream;
 
     /**
      * @var Process
      */
-    protected $process;
+    protected Process $process;
 
     /**
      * @var array
      */
-    protected $actions = array();
+    protected array $actions = array();
 
     public function __construct(Process $process)
     {
@@ -40,9 +41,9 @@ class Manager extends EventEmitter
     /**
      * Set the stream for the Manager instance.
      *
-     * @param Stream $stream
+     * @param ReadableStreamInterface $stream
      */
-    public function setStream(Stream $stream)
+    public function setStream(ReadableStreamInterface $stream)
     {
         $this->stream = $stream;
 
@@ -67,9 +68,9 @@ class Manager extends EventEmitter
      * promise inside this class.
      *
      * @param ActionMessage $actionMessage
-     * @return \React\Promise\Promise
+     * @return Promise
      */
-    public function send(ActionMessage $actionMessage)
+    public function send(ActionMessage $actionMessage): Promise
     {
         $deferred = new Deferred();
 
@@ -81,9 +82,9 @@ class Manager extends EventEmitter
 
     /**
      * Get all the actions currently stored with this Manager.
-     * @return array | action id => Promise
+     * @return array id => Promise
      */
-    public function getActions()
+    public function getActions(): array
     {
         return $this->actions;
     }
