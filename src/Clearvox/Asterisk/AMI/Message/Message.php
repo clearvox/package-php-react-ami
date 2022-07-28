@@ -3,7 +3,6 @@ namespace Clearvox\Asterisk\AMI\Message;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
-use JetBrains\PhpStorm\ArrayShape;
 
 /**
  * All Messages, Incoming and Outgoing, are classes of this larger abstract
@@ -55,7 +54,7 @@ abstract class Message implements Jsonable, Arrayable
      * @param string $key
      * @return string|bool
      */
-    public function getKey($key): bool|string
+    public function getKey(string $key): bool|string
     {
         return (array_key_exists($key, $this->keys) ? $this->keys[$key] : false);
     }
@@ -112,7 +111,7 @@ abstract class Message implements Jsonable, Arrayable
      *
      * @return array
      */
-    #[ArrayShape(['keys' => "array", 'variables' => "array"])] public function toArray(): array
+    public function toArray(): array
     {
         return array(
             'keys'      => $this->keys,
