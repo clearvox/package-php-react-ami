@@ -4,7 +4,7 @@
 
 A major new feature release, see [**release announcement**](https://clue.engineering/2021/announcing-reactphp-default-loop).
 
-* support php >=8.1 (and drop support older versions)
+* support php ^8.0 (and drop support older versions)
 
 * Update library dependencies for major versions
 
