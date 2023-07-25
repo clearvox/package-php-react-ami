@@ -3,7 +3,7 @@ namespace Clearvox\Asterisk\AMI\Finder;
 
 class EventFinder
 {
-    protected $events = array(
+    protected array $events = array(
         "AGIExec"                    => "Clearvox\\Asterisk\\AMI\\Message\\Event\\AGIExecEvent",
         "AgentConnect"               => "Clearvox\\Asterisk\\AMI\\Message\\Event\\AgentConnectEvent",
         "Agentlogin"                 => "Clearvox\\Asterisk\\AMI\\Message\\Event\\AgentloginEvent",
@@ -85,7 +85,7 @@ class EventFinder
         "vgsm_sms_rx"                => "Clearvox\\Asterisk\\AMI\\Message\\Event\\vgsm_sms_rxEvent",
     );
 
-    public function registerEvent($eventName, $class)
+    public function registerEvent($eventName, $class): void
     {
         $this->events[$eventName] = $class;
     }

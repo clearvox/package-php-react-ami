@@ -31,19 +31,19 @@ abstract class Message implements Jsonable, Arrayable
     /**
      * @var array
      */
-    protected $keys = array();
+    protected array $keys = array();
 
     /**
      * @var array
      */
-    protected $variables = array();
+    protected array $variables = array();
 
     /**
      * Get all Keys for this message.
      *
      * @return array
      */
-    public function getKeys()
+    public function getKeys(): array
     {
         return $this->keys;
     }
@@ -54,7 +54,7 @@ abstract class Message implements Jsonable, Arrayable
      * @param string $key
      * @return string|bool
      */
-    public function getKey($key)
+    public function getKey(string $key): bool|string
     {
         return (array_key_exists($key, $this->keys) ? $this->keys[$key] : false);
     }
@@ -66,7 +66,7 @@ abstract class Message implements Jsonable, Arrayable
      * @param string $value
      * @return $this
      */
-    public function setKey($key, $value)
+    public function setKey(string $key, string $value): static
     {
         $this->keys[$key] = $value;
         return $this;
@@ -77,7 +77,7 @@ abstract class Message implements Jsonable, Arrayable
      * this format: Variable: $variable=$value
      * @return array
      */
-    public function getVariables()
+    public function getVariables(): array
     {
         return $this->variables;
     }
@@ -88,7 +88,7 @@ abstract class Message implements Jsonable, Arrayable
      * @param string $variable
      * @return string|bool
      */
-    public function getVariable($variable)
+    public function getVariable(string $variable): bool|string
     {
         return (array_key_exists($variable, $this->variables) ? $this->variables[$variable] : false);
     }
@@ -100,7 +100,7 @@ abstract class Message implements Jsonable, Arrayable
      * @param string $value
      * @return $this
      */
-    public function setVariable($variable, $value)
+    public function setVariable(string $variable, string $value): static
     {
         $this->variables[$variable] = $value;
         return $this;
@@ -111,7 +111,7 @@ abstract class Message implements Jsonable, Arrayable
      *
      * @return array
      */
-    public function toArray()
+    public function toArray(): array
     {
         return array(
             'keys'      => $this->keys,
@@ -125,7 +125,7 @@ abstract class Message implements Jsonable, Arrayable
      * @param  int $options
      * @return string
      */
-    public function toJson($options = 0)
+    public function toJson($options = 0): string
     {
         return json_encode($this->toArray(), $options);
     }
