@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "67db64c7fb24e0374d15ea42a9756ae8",
+    "content-hash": "de8ac75f01f7fb1e24fc6eb7391660e0",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -55,7 +55,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v7.30.0",
+            "version": "v7.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
