@@ -18,7 +18,7 @@ use React\Stream\Stream;
 class Manager extends EventEmitter
 {
     /**
-     * @var \React\Stream\Stream
+     * @var Stream
      */
     protected $stream;
 
