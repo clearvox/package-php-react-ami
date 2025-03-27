@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8935e618f3d7ab955ecaee151b1604f7",
+    "content-hash": "67db64c7fb24e0374d15ea42a9756ae8",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -55,16 +55,16 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v6.20.44",
+            "version": "v7.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "2aeb1ea8985f7a79abaf7186234c94b543a04165"
+                "reference": "7ddcd4342c174e1be0e04f6011fea185d3c653c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/2aeb1ea8985f7a79abaf7186234c94b543a04165",
-                "reference": "2aeb1ea8985f7a79abaf7186234c94b543a04165",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/7ddcd4342c174e1be0e04f6011fea185d3c653c1",
+                "reference": "7ddcd4342c174e1be0e04f6011fea185d3c653c1",
                 "shasum": ""
             },
             "require": {
@@ -75,7 +75,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.x-dev"
+                    "dev-master": "7.x-dev"
                 }
             },
             "autoload": {
@@ -99,7 +99,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-12-01T12:53:22+00:00"
+            "time": "2020-10-27T15:11:37+00:00"
         },
         {
             "name": "psr/container",
