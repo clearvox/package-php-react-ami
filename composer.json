@@ -11,8 +11,11 @@
     ],
     "require": {
         "php": ">=5.3",
-        "react/socket-client": "0.4",
-        "illuminate/contracts": "~v7.29"
+        "react/socket-client": "0.4.*",
+        "react/stream": "0.4.*",
+        "react/promise": "^2.8",
+        "illuminate/contracts": "8.*",
+        "ext-json": "*"
     },
     "autoload": {
         "psr-0": { "Clearvox\\Asterisk\\AMI": "src/" }
