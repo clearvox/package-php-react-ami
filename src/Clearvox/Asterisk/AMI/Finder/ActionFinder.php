@@ -1,6 +1,9 @@
 <?php
 namespace Clearvox\Asterisk\AMI\Finder;
 
+use ReflectionClass;
+use ReflectionException;
+
 class ActionFinder
 {
     protected $actions = array(
@@ -108,10 +111,13 @@ class ActionFinder
         return $this;
     }
 
+    /**
+     * @throws ReflectionException
+     */
     public function find($name, $arguments = array())
     {
         if (array_key_exists($name, $this->actions)) {
-            $instance = new \ReflectionClass($this->actions[$name]);
+            $instance = new ReflectionClass($this->actions[$name]);
             return $instance->newInstanceArgs($arguments);
         }
     }

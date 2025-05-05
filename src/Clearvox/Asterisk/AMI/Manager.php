@@ -4,6 +4,7 @@ namespace Clearvox\Asterisk\AMI;
 use Clearvox\Asterisk\AMI\Message\Action\ActionMessage;
 use Evenement\EventEmitter;
 use React\Promise\Deferred;
+use React\Promise\Promise;
 use React\Stream\Stream;
 
 /**
@@ -67,7 +68,7 @@ class Manager extends EventEmitter
      * promise inside this class.
      *
      * @param ActionMessage $actionMessage
-     * @return \React\Promise\Promise
+     * @return Promise
      */
     public function send(ActionMessage $actionMessage)
     {
@@ -81,7 +82,6 @@ class Manager extends EventEmitter
 
     /**
      * Get all the actions currently stored with this Manager.
-     * @return array | action id => Promise
      */
     public function getActions()
     {
