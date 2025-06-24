@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "682212ed0bc45466b91ecad374a1a68c",
+    "content-hash": "6fe68236744139fb6b88ca81228eddba",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -60,27 +60,27 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v10.48.28",
+            "version": "v11.45.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "f90663a69f926105a70b78060a31f3c64e2d1c74"
+                "reference": "4b2a67d1663f50085bc91e6371492697a5d2d4e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/f90663a69f926105a70b78060a31f3c64e2d1c74",
-                "reference": "f90663a69f926105a70b78060a31f3c64e2d1c74",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/4b2a67d1663f50085bc91e6371492697a5d2d4e8",
+                "reference": "4b2a67d1663f50085bc91e6371492697a5d2d4e8",
                 "shasum": ""
             },
             "require": {
-                "php": "^8.1",
+                "php": "^8.2",
                 "psr/container": "^1.1.1|^2.0.1",
                 "psr/simple-cache": "^1.0|^2.0|^3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.x-dev"
+                    "dev-master": "11.x-dev"
                 }
             },
             "autoload": {
@@ -104,7 +104,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-11-21T14:02:44+00:00"
+            "time": "2025-03-24T11:54:20+00:00"
         },
         {
             "name": "psr/container",
