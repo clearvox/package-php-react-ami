@@ -14,7 +14,7 @@
         "react/socket-client": "0.4.*",
         "react/stream": "0.4.*",
         "react/promise": "^2.8",
-        "illuminate/contracts": "11.*",
+        "illuminate/contracts": "12.*",
         "ext-json": "*"
     },
     "autoload": {
